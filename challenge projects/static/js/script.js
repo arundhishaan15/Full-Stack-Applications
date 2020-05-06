@@ -94,7 +94,7 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage) {
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
 }
 
-// Change the color of all buttons
+// Challenge 4: Change the color of all buttons
 
 var all_buttons = document.getElementsByTagName('button');
 
@@ -143,3 +143,6 @@ function randomColors() {
         all_buttons[i].classList.add(choices[Math.floor(Math.random() * 4)]);
     }
 }
+
+// Challenge 5: Blackjack
+
