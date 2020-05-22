@@ -59,9 +59,9 @@ let movies = [
 ]
 
 window.onload = function() {
-
+    let sortedMovies = sortMoviesByRank(movies);
     // Display Movies list
-    displayMovies(movies);
+    displayMovies(sortedMovies);
 }
 
 /**
@@ -93,13 +93,13 @@ function sortMoviesByRank(numbers){
   // Code from previous sortBestRatingsFirst() function
   for (let j = 0; j < numbers.length - 1; j++) {
 
-      let max_num = numbers[j];
+      let max_num = numbers[j][rank];
       let max_location = j;
 
       for (let i = j; i < numbers.length; i++) {
-          if (numbers[i] > max_num) {
+          if (numbers[i][rank] > max_num) {
               // Know max AND it's index (location)
-              max_num = numbers[i]
+              max_num = numbers[i][rank]
               max_location = i
           }
       }
