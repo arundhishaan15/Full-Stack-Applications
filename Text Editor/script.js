@@ -12,6 +12,8 @@
  */
 function updateText(){
   // CODE GOES HERE
+  let text = document.getElementById('text-input').value;
+  document.getElementById('text-output').innerText = text;
 }
 
 /**

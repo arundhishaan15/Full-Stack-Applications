@@ -8,6 +8,7 @@
 
 #text-input {
   min-height: 200px;
+  border-radius: 3px;
 }
 
 .editor .col {
