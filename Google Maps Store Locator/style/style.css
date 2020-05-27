@@ -68,24 +68,49 @@ body {
  }
 
 .stores-list {
-    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+    height: 100%;
 }
 
-.stores-list div {
-     display: flex;
-     margin-top: 10px;
-     margin-bottom: 2px;
-     margin-right: 60px;
-     padding-left: 20px;     
-     flex-direction: column;
- }
+.store-container{
+    display: flex;
+    
+}
 
-.stores-list hr{
-     margin: 15px;
-     border-top: 2px solid grey;
- }
+.store-info-container {
+    flex-grow: 1;
+}
+
+.store-address {
+    font-size: 21px;
+    color: #514C4C;
+    margin-top: 30px;
+}
 
 .store-phone-number {
-    font-size: 12px;
-    color: grey;
+    color: #B5ADAD;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.store-number-container {
+    align-items: center;
+    display: flex;
+}
+
+.store-number {
+    width: 30px;
+    height: 30px;
+    background-color: #454E53;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.store-address span {
+    display: block;
 }
