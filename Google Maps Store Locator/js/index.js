@@ -1,6 +1,7 @@
 var map;
 var markers = [];
 var infoWindow;
+
 function initMap() {
     var styledMapType = new google.maps.StyledMapType(
         [
@@ -114,10 +115,12 @@ function initMap() {
           }
         ],
         {name: 'Styled Map'});
+
     var losAngeles = {
         lat: 34.0522,
         lng: -118.2437
-    }
+    };
+
     map = new google.maps.Map(document.getElementById('map'), {
         center: losAngeles,
         zoom: 10,
@@ -165,17 +168,23 @@ function showStoresMarkers() {
             store.coordinates.longitude);
         var name = store.name;
         var address = store.addressLines[0];
+        var icons = {
+            location: {
+                icon_coffee: 'img/coffee.png'
+            }
+        };
         bounds.extend(latlng);
-        createMarker(latlng, name, address) ;
+        createMarker(latlng, name, address, icons);
     })
     map.fitBounds(bounds);
 }
 
-function createMarker(latlng, name, address) {
+function createMarker(latlng, name, address, icons) {
     var html = "<b>" + name + "</b> <br/>" + address;
     var marker = new google.maps.Marker({
       map: map,
-      position: latlng
+      position: latlng,
+      icon: icons['location'].icon_coffee
     });
     google.maps.event.addListener(marker, 'mouseover', function() {
       infoWindow.setContent(html);
