@@ -26,4 +26,20 @@
 
 - Show the info window
 
+---> Show the store info in the Google Maps Marker
+
+---> Mark the stores list interactive with the map
+
+---> Allow users to search for stores with a zip code
+
+- Complete the styling for the marker info window
+
+- Open the info window marker on store selection in stores list
+
+- Allow a user to search for the stores in a zip code
+
+- Add a beautiful transition on the hover of an individual store
+
+
+
 

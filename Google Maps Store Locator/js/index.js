@@ -132,11 +132,49 @@ function initMap() {
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map');
     infoWindow = new google.maps.InfoWindow();
-    displayStores();
-    showStoresMarkers();
+    searchStores();
 }
 
-function displayStores() {
+
+function searchStores() {
+    var foundStores = [];
+    var zipCode = document.getElementById('zip-code-input').value;
+    if (zipCode) {
+        stores.forEach(function(store) {
+            var postal = store.address.postalCode.substring(0,5);
+            if (postal == zipCode) {
+                foundStores.push(store);
+            }
+        });
+    } else {
+        foundStores = stores;
+    }
+    clearLocations();
+    displayStores(foundStores);
+    showStoresMarkers(foundStores);
+    setOnClickListener();
+}
+
+
+function clearLocations() {
+    infoWindow.close();
+    for (var i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+    markers.length = 0;
+}
+
+
+function setOnClickListener() {
+    var storeElements = document.querySelectorAll('.store-container');
+    storeElements.forEach(function(elem, index) {
+        elem.addEventListener('click', function() {
+            google.maps.event.trigger(markers[index], 'click');
+        })
+    });
+}
+
+function displayStores(stores) {
 
     var storesHtml = "";
     stores.forEach(function(store, index) {
@@ -144,15 +182,17 @@ function displayStores() {
         var phone = store.phoneNumber;
         storesHtml += ` 
         <div class="store-container">
-            <div class="store-info-container">
-                <div class="store-address">
-                    <span> ${address[0]} </span>
-                    <span> ${address[1]} </span>
+            <div class = "store-container-background">
+                <div class="store-info-container">
+                    <div class="store-address">
+                        <span> ${address[0]} </span>
+                        <span> ${address[1]} </span>
+                    </div>
+                    <div class="store-phone-number">${phone}</div>
                 </div>
-                <div class="store-phone-number">${phone}</div>
-            </div>
-            <div class="store-number-container">
-                <div class="store-number"> ${index+1} </div>
+                <div class="store-number-container">
+                    <div class="store-number"> ${index+1} </div>
+                </div>
             </div>
         </div>
     `
@@ -160,7 +200,7 @@ function displayStores() {
     document.querySelector('.stores-list').innerHTML = storesHtml;
 }
 
-function showStoresMarkers() {
+function showStoresMarkers(stores) {
     var bounds = new google.maps.LatLngBounds();
     stores.forEach(function(store,index) {
         var latlng = new google.maps.LatLng(
@@ -168,25 +208,50 @@ function showStoresMarkers() {
             store.coordinates.longitude);
         var name = store.name;
         var address = store.addressLines[0];
+        var statusText = store.openStatusText;
+        var phone = store.phoneNumber;
         var icons = {
             location: {
                 icon_coffee: 'img/coffee.png'
             }
         };
         bounds.extend(latlng);
-        createMarker(latlng, name, address, icons);
+        createMarker(latlng, name, address, icons, statusText, phone, index);
     })
     map.fitBounds(bounds);
 }
 
-function createMarker(latlng, name, address, icons) {
-    var html = "<b>" + name + "</b> <br/>" + address;
+function createMarker(latlng, name, address, icons, statusText, phone, index) {
+    var html = `
+        <div class = "store-info-window">
+            <div class = "store-info-name"> 
+                ${name}
+            </div>
+            <div class = "store-info-status"> 
+                ${statusText}
+            </div>
+            <div class = "store-info-address">    
+                <div class = "circle">
+                <i class="fas fa-location-arrow"></i>
+                </div>
+                ${address}
+                
+            </div> 
+            <div class = "store-info-phone"> 
+                <div class = "circle">  
+                <i class="fas fa-phone-alt"></i>
+                </div>
+                ${phone}
+            </div> 
+        </div>
+    `;
     var marker = new google.maps.Marker({
       map: map,
       position: latlng,
+      label: `${index+1}`, 
       icon: icons['location'].icon_coffee
     });
-    google.maps.event.addListener(marker, 'mouseover', function() {
+    google.maps.event.addListener(marker, 'click', function() {
       infoWindow.setContent(html);
       infoWindow.open(map, marker);
     });
