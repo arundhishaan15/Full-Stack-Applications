@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
+import Todo from './todo'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
 
 function App() {    
   return (
@@ -16,10 +17,7 @@ function App() {
         <FontAwesomeIcon icon={faPlusSquare} size="2x" style={{ color: 'blue' }} onClick="this.textAdd()" />
       </div>
 
-      <div className="message-container">
-        <h2> Text message </h2>
-        <FontAwesomeIcon icon={faTrash} size="lg" style={{ color: 'red' }} onClick="this.textDelete()" />
-      </div>
+      <Todo text="Hello" />
       
     </div>
   );

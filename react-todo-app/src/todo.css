@@ -1,0 +1,7 @@
+.message-container{
+    border: none;
+    background-color: rgb(243, 224, 52);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 30px;
+}
