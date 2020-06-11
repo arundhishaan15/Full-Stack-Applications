@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Todo from './todo'
+// import Todo from './todo'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import Todo from './todo';
 
 function App() {    
   return (
@@ -17,9 +18,11 @@ function App() {
         <FontAwesomeIcon icon={faPlusSquare} size="2x" style={{ color: 'blue' }} onClick="this.textAdd()" />
       </div>
 
-      <Todo text="Hello" />
+      <Todo text="Okay" />
       
     </div>
+
+
   );
 }
 
