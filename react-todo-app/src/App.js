@@ -13,12 +13,12 @@ function App() {
 
       <div className="input-container">
         <input id="textInput" type="text" placeholder="Tell me..."></input>
-        <FontAwesomeIcon icon={faPlusSquare} />
+        <FontAwesomeIcon icon={faPlusSquare} size="2x" style={{ color: 'blue' }} onClick="this.textAdd()" />
       </div>
 
       <div className="message-container">
         <h2> Text message </h2>
-        <FontAwesomeIcon icon={faTrash} />
+        <FontAwesomeIcon icon={faTrash} size="lg" style={{ color: 'red' }} onClick="this.textDelete()" />
       </div>
       
     </div>
