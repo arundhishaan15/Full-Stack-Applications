@@ -11,7 +11,7 @@ const Todo = (props) => {
             <h2> {props.text} </h2>
             <FontAwesomeIcon icon={faTrash} size="lg" style={{ color: 'red' }} onClick="this.textDelete()" />
         </div>
-
+        
         </div>
     )
 }

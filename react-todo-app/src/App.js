@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-// import Todo from './todo'
+import Todo from './todo'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
-import Todo from './todo';
 
 function App() {    
+  // Creating a list of Todos
+  // const [todos, setTodos] = useState(initialState)
+  
   return (
     <div className="todo">
       
@@ -19,9 +21,11 @@ function App() {
       </div>
 
       <Todo text="Okay" />
+      <Todo text="Okay" />
+      <Todo text="Okay" />
+      <Todo text="Okay" />
       
     </div>
-
 
   );
 }
