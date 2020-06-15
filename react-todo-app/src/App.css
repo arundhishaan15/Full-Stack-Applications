@@ -55,6 +55,11 @@ body {
     outline: none;
 }
 
+#addButton {
+    border: none;
+    background-color: transparent;
+}
+
 
 
 
