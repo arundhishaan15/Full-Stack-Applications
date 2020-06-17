@@ -1,15 +1,14 @@
-.message-container{
-    border: none;
-    background-color: rgb(243, 224, 52);
-    border-radius: 30px;
-    margin-top: 15px;
+.message-container {
+  border: none;
+  background-color: rgb(243, 224, 52);
+  border-radius: 30px;
+  margin-top: 15px;
 }
 
 .message-container-1 {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;
-    padding: 20px;
-    height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 30px;
 }
-

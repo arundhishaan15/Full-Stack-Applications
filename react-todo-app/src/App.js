@@ -24,7 +24,6 @@ function App() {
 
       <div>
         <form className="input-container">
-
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -33,21 +32,24 @@ function App() {
             placeholder="Tell me..."
           ></input>
 
-          <button id="addButton" type="submit" onClick={handleSubmit} disabled={!input}>
+          <button
+            id="addButton"
+            type="submit"
+            onClick={handleSubmit}
+            disabled={!input}
+          >
             <FontAwesomeIcon
               icon={faPlusSquare}
               size="3x"
               style={{ color: "blue" }}
             />
           </button>
-
         </form>
       </div>
 
-      {todos.map((todo) => (
-        <Todo text={todo} />
+      {todos.map((todo, index) => (
+        <Todo text={todo} key={index + 1} />
       ))}
-
     </div>
   );
 }
