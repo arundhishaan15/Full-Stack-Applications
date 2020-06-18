@@ -1,0 +1,95 @@
+/* Default Styles*/
+
+.box1 {background: #A75051}
+.box2 {background: #b27d58}
+.box3 {background: #B3af38}
+.box4 {background: #589a5d}
+.box5 {background: #4781a7}
+.box6 {background: #746198}
+
+.container-sq, .container,  .container2, .container3{
+    border: 10px solid gold;
+    background: lightblue;
+}
+
+ .box {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4), -1px -1px 3px rgba(0,0,0,.4); 
+    /* width: 100px;
+    height: 100px; */
+}
+
+.box-sq {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4), -1px -1px 3px rgba(0,0,0,.4); 
+    width: 100px;
+    height: 100px;
+    
+}
+
+.container-sq{
+    display: flex;
+}
+
+
+/* Different Widths*/
+/* .box1 {width: 100px}
+.box2 {width: 50px}
+.box3 {width: 125px}
+.box4 {width: 75px}
+.box5 {width: 25px}
+.box6 {width: 50px} */
+
+/* Different Heights*/
+/* .box1 {height: 100px}
+.box2 {height: 50px}
+.box3 {height: 125px}
+.box4 {height: 75px}
+.box5 {height: 25px}
+.box6 {height: 50px} */
+
+
+
+/*Styles for Flexbox*/
+
+/* .container {
+    display: flex;
+} */
+
+/* .container2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container3 {
+    display:flex;
+}
+
+.container3 :nth-child(1) { order: 2; }
+.container3 :nth-child(2) { order: 3; }
+.container3 :nth-child(3) { order: 1; }
+.container3 :nth-child(4) { order: 3; }
+.container3 :nth-child(5) { order: 1; }
+.container3 :nth-child(6) { order: 2; }   */
+
+
+/* One Item First*/
+/* .container3 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.active {
+    order: -1;
+    flex: 1 0 100%;
+} */
+
+/* @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+} */
