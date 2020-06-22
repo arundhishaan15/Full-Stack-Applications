@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/adf5b3e4d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-overrides" class="navbar navbar-expand-lg">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#exercise1"
+              >Exercise 1 <span class="sr-only">(current)</span></a
+            >
+            <a class="nav-item nav-link" href="#exercise2">Exercise 2</a>
+            <a class="nav-item nav-link" href="#exercise3">Exercise 3</a>
+            <a class="nav-item nav-link" href="#exercise4">Exercise 4</a>
+            <a class="nav-item nav-link" href="#exercise5">Exercise 5</a>
+          </div>
+        </div>
+      </nav>
+      <div class="caption">
+        <h1>Welcome to CSS Animations Excercise</h1>
+        <h4>
+          CSS Animations are very useful in creating an engaging user experience
+          on your website. In this session, we will learn a few useful ways to
+          use CSS Animations by applying transitions, scroll effects, and
+          keyframe animations to specific elements on this page. We will also
+          learn a little bit about box shadows to give some elements like
+          buttons or divs an elevated look.
+        </h4>
+        <h4>Let us start by clicking the arrow below</h4>
+        <p>CLICK HERE</p>
+        <a id="arrowIcon" href="#exercise1"
+          ><i class="fas fa-arrow-down"></i
+        ></a>
+      </div>
+    </header>
+    <section id="content">
+      <div class="info">
+        <h3 id="exercise1">EXERCISE 1: CSS Scroll Behaviour Property</h3>
+        <p>
+          Mostly triggered when you click on a link. This CSS property lets us
+          define whether the browser jumps to a new location or animates
+          smoothly to the location when a user clicks a link that targets a
+          location within the same page.
+        </p>
+        <p>
+          <span>Your Task: </span>Currently, when you click on the Exercise
+          links in the Navbar above, it jumps to the location of the selected
+          exercise. Change this behavior to smoothly animate scrolling to the
+          selected exercise.
+        </p>
+        <p>
+          <span>Check solution by clicking on an item in the Navbar above </span
+          ><br /><br />
+        </p>
+        <a class="backToTop" href="#header"
+          >Back To Top <i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
+      <div class="info">
+        <h3 id="exercise2">EXERCISE 2: CSS Transform Property</h3>
+        <p>
+          The Transform property allows us to apply 2D or 3D transformation
+          effects to an element. These effects can be combined with the
+          animation property or the html element states (:focus, :hover,
+          :active, etc) to create useful visual cues to your users such as
+          button press effect, sliding an object from one point to another, etc.
+        </p>
+        <p>
+          <span>Your Task: </span>Create a Button and apply a button press
+          effect when it is clicked.
+        </p>
+        <p>
+          <span>Tip: </span>Apply the effect on the :active state of the
+          element.
+        </p>
+        <p>
+          <span>Your solution should appear below: </span><br /><br />
+          <!-- <div>Enter Solution here</div> -->
+          <div class="btnPress">Click Me</div>
+        </p>
+        <a class="backToTop" href="#header"
+          >Back To Top <i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
+      <div class="info">
+        <h3 id="exercise3">EXERCISE 3: CSS Transitions</h3>
+        <p>
+          The transition property allows us to change values of elements over a
+          period of time. This property requires a trigger to run. The trigger
+          could be a change in the element state (example :hover), or a
+          Javascript event. Key differences between Transitions and Animations
+          are:
+        </p>
+
+        <ol class="list">
+          <li>
+            Transitions require a trigger to start and Animations do not require
+            one.
+          </li>
+          <li>
+            Transitions can change only between two states while Animations can
+            change between multiple states.
+          </li>
+          <li>
+            Transitions cannot run in a loop while Animations can run as many
+            times as we want.
+          </li>
+        </ol>
+        <br />
+        <p><span>Your Task: </span></p>
+        <ol class="list">
+          <li class="listItem">
+            Create a square using a div, and transition its border radius to 50%
+            when a mouse is moved over it.
+          </li>
+          <li class="listItem">
+            Transition the transform property to move the box 450px to the right
+            when it is clicked.
+          </li>
+          <li class="listItem">
+            Using CSS Transitions, create a smooth hover effect on the Navbar
+            items
+          </li>
+        </ol>
+        <br /><br /><br />
+        <p class="solution">
+          <span>Solution 1 should appear below: </span>
+        </p>
+        <!-- <div>Enter solution here</div> -->
+        <div class="box"></div>
+        <p class="solution">
+          <span>Solution 2 should appear below: </span>
+        </p>
+         <!-- <div>Enter solution here</div> -->
+         <div class="box-2"></div>
+        <p class="solution">
+          <span
+            >For Solution 3, scroll back to the top of this page and mouseover
+            the navbar items
+          </span>
+        </p>
+       
+        <a class="backToTop" href="#header"
+          >Back To Top <i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
+      <div class="info">
+        <h3 id="exercise4">EXERCISE 4: CSS Keyframe Animations</h3>
+        <p>
+          The animation property allows us to animate transitions from one state
+          to another or through multiple states. There are two main components
+          for css animations; a style that describes the animation and keyframes
+          that specify the start and end states of the animation’s style.
+          Animations are autonomous and do not require a trigger before they
+          start. They can however respond to triggers from Javascript or a
+          change in the CSS state (e.g. :hover, :active, etc).
+        </p>
+
+        <p><span>Your Task: </span></p>
+        <ol class="list">
+          <li class="listItem">
+            Create a box to change its border radius to 50%, and animate to the
+            right by 960px while going up 90px and down to its original
+            position. Bonus points if you can reverse it to its original
+            position.
+          </li>
+          <li class="listItem">
+            Animate the arrow at the top of this page to continuously point
+            downwards.
+          </li>
+        </ol>
+        <br />
+        <p class="solution">
+          <span>Solution 1 should appear below: </span>
+        </p>
+        <!-- <div>Enter solution here</div> -->
+        <div class="box-3"></div>
+        <p class="solution">
+          <span
+            >Solution 2: Scroll up and check the arrow at the beginning of this
+            page.
+          </span>
+        </p>
+        <a class="backToTop" href="#header"
+          >Back To Top <i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
+      <div class="info">
+        <h3 id="exercise5" data-aos="zoom-in">EXERCISE 5: Animation Libraries</h3>
+        <p>
+          There are also a ton of animation libraries that can be used on your
+          website to create quick animation effects. An example of such
+          libraries is the AOS(Animate On Scroll) library.
+        </p>
+        <p>
+          One key benefit of using animation libraries is that they are fairly
+          easy to set up on your website and save a lot of time coding
+          animations in css. The disadvantage to using libraries is that we have
+          do not have full control over the animation and they could have
+          negative impact on website performance as the libraries have to be
+          loaded first before they can be used.
+        </p>
+
+        <p>
+          <span>Your Task: </span>Using the Animate On Scroll(AOS) library,
+          animate the heading of this exercise to zoom-in when you scroll to
+          this exercise.
+        </p>
+
+        <p class="solution">
+          <span
+            >Solution: From the header of the page, scroll to this exercise. The
+            heading should appear with a zoom-in effect.
+          </span>
+        </p>
+        <!-- <div>Enter solution here</div> -->
+
+        <a class="backToTop" href="#header"
+          >Back To Top <i class="fas fa-arrow-up"></i
+        ></a>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

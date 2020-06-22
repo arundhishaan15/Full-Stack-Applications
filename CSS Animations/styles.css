@@ -1,0 +1,244 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(213, 221, 233);
+  margin-bottom: 50px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./header_image.jpg");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.btnPress {
+  background-color: red;
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 3px 6px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btnPress:active {
+  transform: translateY(5px);
+}
+
+.navbar-nav {
+  background-color: #3a3a3a;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.navbar-nav a {
+  color: white;
+}
+
+.nav-item.nav-link {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/*** NAVBAR HOVER TRANSITION HERE ****/
+
+.navbar-nav a:hover {
+  background-color: white;
+  color: #3a3a3a;
+  border-radius: 5px;
+  transition: background-color 0.5s ease-in;
+}
+
+.caption {
+  position: relative;
+  top: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.caption h4 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.caption h1 {
+  font-size: 60px;
+}
+
+.caption p {
+  position: relative;
+  top: 150px;
+  font-size: 28px;
+}
+
+#arrowIcon {
+  font-size: 40px;
+  position: relative;
+  top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  animation: arrow 1s steps(30) infinite;
+}
+
+/*Animate arrow Icon here*/
+@keyframes arrow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+#arrowIcon:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+#content {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.info {
+  text-align: center;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  color: #3a3a3a;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.info h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.info p,
+.info ul {
+  text-align: justify;
+  font-size: 24px;
+}
+
+.info ul {
+  width: 50%;
+}
+
+.info span {
+  font-weight: 700;
+}
+
+.backToTop {
+  font-size: 20px;
+  color: #3a3a3a;
+  font-weight: 500;
+}
+
+.backToTop:hover {
+  text-decoration: none;
+}
+
+/******TRANSFORM HERE********/
+
+.list {
+  text-align: left;
+  font-size: 24px;
+}
+
+.solution {
+  margin-bottom: 100px;
+}
+/*****TRANSITIONS HERE******/
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: green;
+  margin-bottom: 100px;
+  transition: border-radius 0.3s ease-in;
+}
+.box:hover {
+  border-radius: 50%;
+}
+.box-2 {
+  width: 150px;
+  height: 150px;
+  background-color: blue;
+  margin-bottom: 80px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box-2:active {
+  transform: translateX(450px);
+}
+/*****KEYFRAME ANIMATION*****/
+.box-3 {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  margin-bottom: 80px;
+  border-radius: 50%;
+  animation: move 4s steps(30) infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  12.5% {
+    transform: translate(120px, -90px);
+    /* border-radius: 50%; */
+  }
+  25% {
+    transform: translate(240px, 0px);
+    /* border-radius: 50%; */
+  }
+  37.5% {
+    transform: translate(360px, -90px);
+    /* border-radius: 50%; */
+  }
+  50% {
+    transform: translate(480px, 0px);
+    /* border-radius: 50%; */
+  }
+  62.5% {
+    transform: translate(600px, -90px);
+    /* border-radius: 50%; */
+  }
+
+  75% {
+    transform: translate(720px, 0px);
+    /* border-radius: 50%; */
+  }
+  87.5% {
+    transform: translate(840px, -90px);
+    /* border-radius: 50%; */
+  }
+  100% {
+    transform: translate(960px, 0px);
+    /* border-radius: 50%; */
+  }
+}
